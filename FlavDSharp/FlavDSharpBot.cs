@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FlavDSharp
 {
-    partial class Program
+    partial class FlavDSharpBot
     {
         static DiscordClient discord;
         static void Main(String[] args)

@@ -1,0 +1,2 @@
+# FlavDSharp
+DSharpPlus discord bot

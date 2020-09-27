@@ -32,7 +32,30 @@ namespace FlavDSharp
                 {
                     await e.Message.RespondAsync("RAWR!!!");
                 }
-
+                else if (e.Message.Content.Equals("!website"))
+                {
+                    await e.Message.RespondAsync("https://www.flavcreations.com/");
+                }
+                else if (e.Message.Content.Equals("!twitch"))
+                {
+                    await e.Message.RespondAsync("https://www.twitch.tv/flavcreations");
+                }
+                else if (e.Message.Content.Equals("!github"))
+                {
+                    await e.Message.RespondAsync("https://github.com/Flavius-The-Person");
+                }
+                else if (e.Message.Content.Equals("!patreon"))
+                {
+                    await e.Message.RespondAsync("");
+                }
+                else if (e.Message.Content.Equals("!streamwarriors"))
+                {
+                    await e.Message.RespondAsync("https://github.com/Flavius-The-Person/stream-warriors-engine");
+                }
+                else if (e.Message.Content.Equals("!legionslive"))
+                {
+                    await e.Message.RespondAsync("Legions Live Game Coming Soon!");
+                }
             };
 
             await discord.ConnectAsync();

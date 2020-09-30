@@ -349,3 +349,6 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 /FlavDSharp/Creds.cs
+.vscode/launch.json
+.vscode/tasks.json
+package-lock.json

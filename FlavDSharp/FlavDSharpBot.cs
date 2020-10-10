@@ -24,15 +24,40 @@ namespace FlavDSharp
 
             discord.MessageCreated += async e =>
             {
-                if(e.Message.ChannelId.Equals(614206030372667396) & e.Message.Content.StartsWith("ping"))
+                string[] commands = {
+                                    "!ping","RAWR","!website","!twitch",
+                                    "!github","!patreon",
+                                    "!streamwarriors","!legionslive",
+
+                                    "!commands"
+                                    };
+
+                string[] answers = {
+                                    "pong!","RAWR!!!","https://www.flavcreations.com/","https://www.twitch.tv/flavcreations",
+                                    "https://www.github.com/Flavius-The-Person","",
+                                    "https://www.github.com/Flavius-The-Person/stream-warriors-engine","Legions Live Game Coming Soon!",
+                                    
+                                    "!ping, RAWR, !website, !twitch, !github, !streamwarriors, !legionslive"
+                                    };
+                
+                for(int x = 0; x < commands.Length; x++)
+                {
+                    if(e.Message.Content.Equals(commands[x]))
+                    {
+                        await e.Message.RespondAsync(answers[x]);
+                    }
+                }
+                
+                /*
+                if(e.Message.ChannelId.Equals(614206030372667396) & e.Message.Content.StartsWith(commands[0]))
                 {
                     await e.Message.RespondAsync("pong!");
                 }
-                else if(e.Message.Content.Equals("RAWR"))
+                else if(e.Message.Content.Equals(commands[1]))
                 {
                     await e.Message.RespondAsync("RAWR!!!");
                 }
-                else if (e.Message.Content.Equals("!website"))
+                else if (e.Message.Content.Equals(commands[2]))
                 {
                     await e.Message.RespondAsync("https://www.flavcreations.com/");
                 }
@@ -55,7 +80,7 @@ namespace FlavDSharp
                 else if (e.Message.Content.Equals("!legionslive"))
                 {
                     await e.Message.RespondAsync("Legions Live Game Coming Soon!");
-                }
+                }*/
             };
 
             await discord.ConnectAsync();
